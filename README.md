@@ -20,13 +20,13 @@ Add to your `platformio.ini`:
 ```ini
 [env:myenv]
 lib_deps =
-    EE_FILE
+    ee_file
 ```
 
 Or install via PlatformIO CLI:
 
 ```bash
-pio pkg install --library "EE_FILE"
+pio pkg install --library "ee_file"
 ```
 
 ## Quick Start
@@ -212,4 +212,4 @@ Contributions welcome! Please submit issues and pull requests on GitHub.
 
 ## Author
 
-Your Name <your.email@example.com>
+luobeifeng <1824246644@qq.com>
