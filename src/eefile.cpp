@@ -4,8 +4,8 @@
  * @note 去掉了 CRC 和数据头，节省空间；支持多扇区
  */
 
-#include "Eefile.h"
-#include "Debug.h"
+#include "eefile.h"
+// #include "Debug.h"
 #include <cstdarg>
 
 // ============ 通过枚举查找文件索引 ============
@@ -206,7 +206,8 @@ bool EEFILE::read(EEFileType type, uint8_t* data, uint16_t length)
     }
 
     // 读取用户数据（从 address+1 开始）
-    uint16_t readLen = (length < files[idx].dataLen) ? length : files[idx].dataLen;
+    // uint16_t readLen = (length < files[idx].dataLen) ? length : files[idx].dataLen;
+    uint16_t readLen = length;
     for (uint16_t i = 0; i < readLen; i++) {
         data[i] = ::EEPROM.read(dataAddr + i);
     }
